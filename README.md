@@ -1,5 +1,5 @@
 # ecommerce-sql-analytics-project
-SQL-based business analytics project using real-world e-commerce transactional data.
+SQL-based business analytics project using real-world e-commerce transactional data to analyze customer behavior, revenue trends, and product performance.
 
 This project analyzes real-world e-commerce transactional data using Microsoft SQL Server to generate business insights related to customer behavior, revenue trends, and product performance.
 Skills Used SQL:
