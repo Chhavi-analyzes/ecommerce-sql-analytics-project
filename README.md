@@ -22,9 +22,3 @@ Shipping Cost Analysis
 Tools Used
 Microsoft SQL Server
 SQL Server Management Studio (SSMS)
-
-
-
-strengthen resume
-support applications
-improve credibility massively
