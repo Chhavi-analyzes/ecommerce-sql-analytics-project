@@ -1,43 +1,187 @@
-# 🛒 E-Commerce Business Analytics Engine (SQL)
+# 🛒 E-Commerce Analytics Project | SQL + Power BI
 
 ## 📌 Project Overview
-This project delivers deep-dive business intelligence on e-commerce transactional data using **Microsoft SQL Server**. By designing relational joins, subqueries, and window functions across multiple core datasets, this project uncovers actionable insights regarding **customer purchasing behavior, monthly revenue trends, and granular product performance** to drive strategic business growth.
+
+This project analyzes an e-commerce dataset containing customer, order, product, and transaction data. The objective was to transform raw transactional data into actionable business insights using SQL for analysis and Power BI for visualization.
+
+The project demonstrates the complete analytics workflow:
+
+**Data Exploration → SQL Analysis → Data Modeling → Dashboard Development → Business Insights**
 
 ---
 
-## 🛠️ Data Architecture & Schema
-The project structures a relational database layout involving four core entities. Relationships were mapped and queried as follows:
+## 🛠️ Tools & Technologies
 
-`Customers` ──👉 `Orders` ──👉 `Order Items` ──👉 `Products`
-
-### Relational Framework:
-*   **Customers ➔ Orders:** Evaluates customer lifetime value (LTV) and historical transaction frequency.
-*   **Orders ➔ Order Items:** Bridges macro order-level data to exact line-item transaction metrics.
-*   **Order Items ➔ Products:** Links quantities sold and transactional pricing data to product categories and catalogs.
-
----
-
-## 🧰 Technical Skills & Advanced SQL Concepts Used
-*   **Relational Joins:** Consolidating multi-table data using `INNER JOIN` and `LEFT JOIN`.
-*   **Common Table Expressions (CTEs):** Modularizing long queries for clean, performant, and scannable code.
-*   **Window Functions:** Utilizing `DENSE_RANK()` and `PARTITION BY` for complex, localized ranking mechanics.
-*   **Conditional Logic & Aggregations:** Dynamic bucketing using `CASE WHEN`, `SUM()`, `AVG()`, and `COUNT()`.
-*   **Robust Data Engineering Tactics:** Leveraging `EXISTS`, subqueries, and `COALESCE` to handle missing/null variables gracefully.
+* SQL Server
+* Power BI
+* DAX
+* Excel
+* Data Modeling
+* Git & GitHub
 
 ---
 
-## 🎯 Business Problems Solved
+## 📊 Dataset Summary
 
-### 1. Customer Behavior Analytics
-*   **Top-Spending Cohorts:** Segmented and highlighted high-value assets based on cumulative lifetime expenditure.
-*   **Purchase Velocity Tracking:** Classified user bases into **Frequent Buyers vs. Occasional Buyers** to help direct marketing re-engagement pipelines.
-*   **Above-Average Spending Profiles:** Isolated accounts maintaining average basket values higher than the global marketplace benchmark.
-*   **Geographical Benchmarking:** Dynamically ranked local customer spends within their respective home cities.
+The dataset contains:
 
-### 2. Financial Revenue Trends
-*   **Total Revenue Baseline:** Built an aggregation engine compiling line-item quantities, unit margins, and price points.
-*   **Chronological Sales Patterns:** Tracked month-over-month transactional volume changes to capture seasonal performance adjustments.
-*   **Logistics Overhead Leakage:** Evaluated total shipping costs relative to net transaction values to monitor fulfillment efficiency.
+* 99K+ Customers
+* 99K+ Orders
+* 100K+ Order Items
+* Product Category Information
+* Customer Geographic Information
+
+---
+
+## 🔍 SQL Analysis
+
+Performed exploratory and advanced analysis using:
+
+### SQL Concepts Used
+
+* Joins
+* CTEs (Common Table Expressions)
+* Window Functions
+* Aggregate Functions
+* Views
+* Subqueries
+* Ranking Functions
+* Date Functions
+* CASE Statements
+
+### Business Questions Answered
+
+* Which product categories generate the highest revenue?
+* Which customers contribute the most revenue?
+* What are the monthly sales trends?
+* Which states drive the most revenue?
+* How long does order delivery take?
+* Which categories dominate sales performance?
+
+---
+
+## 📈 Power BI Dashboard
+
+Built an interactive dashboard consisting of:
+
+### Executive Overview
+
+* Total Revenue
+* Total Orders
+* Total Customers
+* Average Order Value (AOV)
+* Monthly Revenue Trend
+* Revenue by State
+* Top Product Categories
+
+### Customer Analytics
+
+* Customer Segmentation
+* Top Customers
+* Customer Distribution Analysis
+* Orders per Customer
+
+### Product Analytics
+
+* Category Performance
+* Product Revenue Ranking
+* Revenue Contribution Analysis
+
+---
+
+## 📐 Data Model
+
+A star schema model was created using:
+
+* Customer Table
+* Orders Table
+* Order Item Table
+* Product Table
+* Date Table
+
+Relationships were established to support scalable reporting and time-intelligence calculations.
+
+---
+
+## 📊 Key Metrics
+
+### Revenue
+
+```DAX
+Revenue =
+SUM(order_item[price]) +
+SUM(order_item[freight_value])
+```
+
+### Total Orders
+
+```DAX
+Total Orders =
+DISTINCTCOUNT(order[order_id])
+```
+
+### Average Order Value
+
+```DAX
+Average Order Value =
+DIVIDE([Revenue],[Total Orders])
+```
+
+### Total Customers
+
+```DAX
+Total Customers =
+DISTINCTCOUNT(customer[customer_id])
+```
+
+---
+
+## 💡 Key Insights
+
+* Revenue demonstrated strong growth throughout 2017.
+* 2018 recorded the highest revenue levels.
+* Beauty & Health emerged as the top-performing category.
+* Watches & Gifts consistently ranked among top revenue generators.
+* Revenue was concentrated in a small number of states.
+* Orders per customer remained close to 1, indicating low repeat purchase behavior and potential customer retention opportunities.
+
+---
+
+## 🎯 Business Impact
+
+The dashboard enables stakeholders to:
+
+* Monitor business performance
+* Identify top-performing products and regions
+* Track customer behavior
+* Support strategic decision-making
+* Discover retention and growth opportunities
+
+## 🚀 Skills Demonstrated
+
+* SQL Querying
+* Data Cleaning
+* Data Analysis
+* Business Intelligence
+* Power BI
+* DAX
+* Data Modeling
+* Dashboard Design
+* Business Storytelling
+* Analytical Thinking
+
+---
+
+## 👤 Author
+
+**Chhavi Agrawal**
+
+Aspiring Data Analyst | MBA (Business Analytics) Candidate
+
+GitHub: https://github.com/Chhavi-analyzes
+
+
+  
 
 
 
